@@ -27,7 +27,7 @@ const LoginContainer = styled(Grid)({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundImage: `url('/19061936-autumn-dreams.jpg')`,
+  backgroundImage: `url('/loginbackground.jpg')`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
 });
