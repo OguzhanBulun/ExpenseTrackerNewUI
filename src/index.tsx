@@ -2,26 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import AppRoutes from './routes';
 import '@mui/material/styles';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
+import './styles.css'; // Yeni CSS dosyası
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-  },
-});
+// App Provider
+import AppProvider from './contexts/AppProvider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <AppProvider>
+      <CssBaseline />
       <AppRoutes />
-    </ThemeProvider>
+    </AppProvider>
   </React.StrictMode>
 );
